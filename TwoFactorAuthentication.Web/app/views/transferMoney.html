@@ -1,0 +1,36 @@
+﻿<form role="form">
+    <div class="row">
+        <div class="col-md-3">
+            &nbsp;
+        </div>
+        <div class="col-md-6">
+            <h2>Transfer Money</h2>
+            <div class="form-group">
+                <input type="email" class="form-control" placeholder="From Email" data-ng-model="transferData.fromEmail" required>
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control" placeholder="To Email" data-ng-model="transferData.toEmail" required>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+
+                    <input type="number" class="form-control" placeholder="Amount" data-ng-model="transferData.amount" required>
+                    <span class="input-group-addon">$</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="number" class="form-control" placeholder="Pass Code from Google Authenticator" data-ng-model="transferData.oneTimePassword" required maxlength="6">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-md btn-primary btn-block" type="submit" data-ng-click="transfer()">Transfer</button>
+            </div>
+              <div data-ng-hide="message == ''" data-ng-class="(savedSuccessfully) ? 'alert alert-success' : 'alert alert-danger'">
+                {{message}}
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            &nbsp;
+        </div>
+    </div>
+</form>

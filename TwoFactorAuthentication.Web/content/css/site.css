@@ -1,0 +1,38 @@
+﻿/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+      padding-top: 40px;
+  xpadding-bottom: 10px;
+}
+
+
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    background-color: rgb(55, 90, 127);
+}
+
+.text-muted {
+    margin: 20px 0;
+}
+
+
+
+    .form-control input[type="text"] {
+        margin-top:5px;
+        margin-bottom: 5px  !important;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+

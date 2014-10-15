@@ -1,0 +1,42 @@
+﻿
+<form role="form">
+    <div class="row">
+        <div class="col-md-1">
+            &nbsp;
+        </div>
+        <div class="col-md-5">
+            <h2>Sign up</h2>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Username" data-ng-model="registration.userName" required autofocus>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="Password" data-ng-model="registration.password" required>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="Confirm Password" data-ng-model="registration.confirmPassword" required>
+            </div>
+            <p class="text-success">Two Factor Authentication is Enabled</p>
+            <div class="form-group">
+                <button class="btn btn-md btn-primary btn-block" type="submit" data-ng-click="signUp()" data-ng-disabled="savedSuccessfully">Submit</button>
+            </div>
+            <div data-ng-hide="message == ''" data-ng-class="(savedSuccessfully) ? 'alert alert-success' : 'alert alert-danger'">
+                {{message}}
+            </div>
+        </div>
+        <div class="col-md-5">
+            <h2>Authenticator Code</h2>
+            <div class="text-info" ng-show="qrCode==''">Your Google Authenticator QR code will be displayed here after successful Signup!</div>
+            <div ng-show="qrCode!=''">
+                <p class="text-success">Authenticator Code: <strong>{{qrCode}}</strong></p>
+                <div class="form-group">
+                    <img ng-src="{{qrCodeSrc}}" />
+                </div>
+                <!--<a href="#/transhistory" class="btn btn-primary btn-md btn-block">View Transactions History</a>-->
+            </div>
+
+        </div>
+        <div class="col-md-1">
+            &nbsp;
+        </div>
+    </div>
+</form>

@@ -1,0 +1,39 @@
+﻿
+<div class="row">
+    <div class="col-md-2">
+        &nbsp;
+    </div>
+    <div class="col-md-8">
+        <table class="table table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Customer</th>
+                    <th>Amount</th>
+                    <th>Action Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-ng-repeat="trans in transactionsHistory">
+                    <td>
+                        {{ trans.id }}
+                    </td>
+                    <td>
+                        {{ trans.customerName }}
+                    </td>
+                    <td>
+                        {{ trans.amount }}
+                    </td>
+                     <td>
+                        {{ trans.actionDate | date:'short'}} 
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="#/transfermoney" class="btn btn-primary btn-md btn-block">Transfer Money (Requires TFA)</a>
+    </div>
+
+    <div class="col-md-2">
+        &nbsp;
+    </div>
+</div>
